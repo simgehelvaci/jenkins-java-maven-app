@@ -16,5 +16,11 @@ pipeline {
                 }
             }
         }
+        stage('Deliver') { 
+            steps {
+                sh 'chmod +x ./scripts/deliver.sh' 
+                sh './scripts/deliver.sh' 
+            }
+        }
     }
 }
